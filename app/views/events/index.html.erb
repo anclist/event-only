@@ -6,6 +6,6 @@
   <% @events.each do |event| %>
   <!-- <%= event.inspect %> <br> -->
 
-  <li><%= event.name %>, <%= event.date.strftime("%A, %h %d, %Y") %> <%= link_to "details", event_path(event) %></li>
+  <li><%= event.date.strftime("%h %d, %Y") %> <%= event.name %> |  <%= link_to "details", event_path(event) %> | <%= link_to 'Delete', event_path(event), method: :delete, data: {confirm: "Are you sure you want to delete the event '#{event.name}'? This cannot be undone!"} %></li>
   <% end %>
 </ul>
