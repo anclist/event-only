@@ -1,7 +1,7 @@
 <h1> <%= @event.name %></h1>
-<p> Date: <%= @event.date %> </p>
-<p> Created at: <%= @event.created_at %> </p>
-<p> Updated at: <%= @event.updated_at %> </p>
+<p> Date: <%= @event.date.strftime("%A, %h %d, %Y") %> </p>
+<p> Created at: <%= @event.created_at.strftime("%A, %h %d, %Y") %> </p>
+<p> Updated at: <%= @event.updated_at.strftime("%A, %h %d, %Y") %> </p>
 
 
 <%= link_to "Back to all events", events_path %>
